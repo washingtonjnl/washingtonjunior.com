@@ -22,7 +22,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const databaseId =
     process.env.NOTION_DATABASE_ID ?? 'f0b7ca8787b74850ac55bbe4084f6917';
 
-  const projects = await getPageTable<ProjectInterface>(databaseId);
+  const projects = await getPageTable<ProjectInterface>(databaseId).then(
+    projects => projects.filter(p => p.published),
+  );
 
   return {
     props: {
@@ -101,7 +103,7 @@ export default function Home({
         </div>
       </section>
 
-      {designProjects && (
+      {designProjects.length > 0 && (
         <section
           id="projects"
           className={styles.section}
@@ -126,7 +128,7 @@ export default function Home({
         </section>
       )}
 
-      {researchProjects && (
+      {researchProjects.length > 0 && (
         <section className={styles.section}>
           <div className={styles.container}>
             <h2 className={styles.h2 + ' ' + styles.full}>

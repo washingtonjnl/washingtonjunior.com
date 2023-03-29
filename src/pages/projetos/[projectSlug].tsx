@@ -43,17 +43,16 @@ export const getStaticProps: GetStaticProps = async context => {
   const allProjects = await getPageTable<ProjectInterface>(databaseId);
   const thisProject = allProjects.find(p => p.slug === projectSlug);
 
-  if (!thisProject) {
-    throw Error('Project not found');
+  if (
+    !thisProject || // project not found
+    !thisProject.published || // project not published
+    thisProject.visibility === 'restrict' || // project requires a password
+    thisProject.visibility === 'soon' // project not finished
+  ) {
+    return {
+      notFound: true,
+    };
   }
-
-  if (!thisProject.published) {
-    throw Error('Project not published');
-  }
-
-  // if (thisProject.visibility === 'restrict') {
-  //   throw Error('Project requires a password');
-  // }
 
   const projectContent = await getPageBlocks(thisProject.id);
 
@@ -98,8 +97,10 @@ export default function ProjectDetail({
           <div className={styles.projectSummary}>
             <label>
               {projectSummary.client} (
-              {new Date(projectSummary.date).getFullYear()})
-              {projectSummary.tags.map(tag => ` ‎ | ‎ ${tag}`)}
+              {new Date(projectSummary.date).getFullYear()}){' ‎ | ‎ '}
+              {projectSummary.tags.map((tag, i, arr) =>
+                i > 0 ? (i === arr.length - 1 ? ` e ${tag}` : `, ${tag}`) : tag,
+              )}
             </label>
             <h1>{projectSummary.title}</h1>
             <h2>{projectSummary.preview}</h2>
