@@ -9,7 +9,7 @@ export function ContactSection(): JSX.Element {
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.h2}>
-          <MessageCircle size={40} />
+          <MessageCircle size={32} />
           Fale comigo
         </h2>
         <ContactLink

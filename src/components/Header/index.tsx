@@ -32,7 +32,7 @@ export function Header(): JSX.Element {
           onClick={switchTheme}
           className={styles.themeButton}
         >
-          {currentTheme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+          {currentTheme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
         </button>
       </nav>
     </header>

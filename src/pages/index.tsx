@@ -67,7 +67,7 @@ export default function Home({
               sempre centrado na experiência das pessoas usuárias.
             </p>
             <CTA href="/#projects">
-              <Zap size={20} />
+              <Zap size={18} />
               ver projetos selecionados
             </CTA>
           </div>
@@ -77,7 +77,7 @@ export default function Home({
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.h2}>
-            <Compass size={40} />
+            <Compass size={32} />
             Princípios
           </h2>
           <Principle
@@ -110,7 +110,7 @@ export default function Home({
       >
         <div className={styles.container}>
           <h2 className={styles.h2 + ' ' + styles.full}>
-            <Layers size={40} />
+            <Layers size={32} />
             Projetos de design
           </h2>
           {designProjects.map(project => (
@@ -131,7 +131,7 @@ export default function Home({
         <section className={styles.section}>
           <div className={styles.container}>
             <h2 className={styles.h2 + ' ' + styles.full}>
-              <Search size={40} />
+              <Search size={32} />
               Projetos de pesquisa
             </h2>
             {researchProjects.map(project => (

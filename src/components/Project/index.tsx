@@ -36,19 +36,19 @@ export function Project({
           {
             free: (
               <CTA href={`/projetos/${slug}`}>
-                <FileText size={20} />
+                <FileText size={18} />
                 ver projeto completo
               </CTA>
             ),
             restrict: (
               <CTA href={`/projetos/${slug}`}>
-                <Lock size={20} />
+                <Lock size={18} />
                 ver projeto completo
               </CTA>
             ),
             soon: (
               <CTA disabled>
-                <Clock size={20} />
+                <Clock size={18} />
                 em breve
               </CTA>
             ),
