@@ -1,13 +1,21 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document() {
+import { ThemeProvider } from '@/contexts/ThemeContext';
+
+import { Favicon } from '@/components/Favicon';
+
+export default function Document(): JSX.Element {
   return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
+    <ThemeProvider>
+      <Html lang="pt-br">
+        <Head>
+          <Favicon />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    </ThemeProvider>
   );
 }

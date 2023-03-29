@@ -1,0 +1,37 @@
+.principle {
+  grid-column: 3 / 5;
+
+  &:nth-of-type(2n) {
+    grid-column: 5 /7;
+  }
+
+  strong {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 130%;
+
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    line-height: 150%;
+    color: var(--base11);
+  }
+
+  @media (max-width: 996px) {
+    grid-column: 1 / 4;
+
+    &:nth-of-type(2n) {
+      grid-column: 4 / 7;
+    }
+  }
+
+  @media (max-width: 680px) {
+    grid-column: 1 / 7;
+
+    &:nth-of-type(2n) {
+      grid-column: 1 / 7;
+    }
+  }
+}

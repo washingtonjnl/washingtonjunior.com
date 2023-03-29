@@ -1,0 +1,74 @@
+.header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 2.5rem;
+  border-bottom: 1px solid var(--base6);
+
+  backdrop-filter: blur(1rem);
+
+  @media (max-width: 996px) {
+    padding: 1rem 40px;
+  }
+
+  @media (max-width: 680px) {
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 2rem;
+  }
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+
+  &::after {
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.nav {
+  font-size: 0.875rem;
+  color: var(--base11);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.themeButton {
+  color: var(--base11);
+  background-color: transparent;
+  border: none;
+
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--base4);
+    color: var(--base12);
+  }
+}

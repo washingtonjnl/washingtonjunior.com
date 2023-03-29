@@ -1,0 +1,58 @@
+.cta {
+  background: transparent;
+  border: none;
+
+  position: relative;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 0;
+
+  font-size: 1rem;
+  color: var(--primary10);
+
+  transition: color 0.2s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+
+    width: 0%;
+    height: 1px;
+
+    transition: 0.2s;
+
+    background-color: var(--primary11);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--primary11);
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.125rem;
+  }
+}
+
+.disabled {
+  color: var(--base9);
+  cursor: not-allowed;
+
+  &::after {
+    background-color: var(--base8);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--base9);
+  }
+}

@@ -1,0 +1,51 @@
+.project {
+  grid-column: auto / span 3;
+
+  background-color: var(--base3);
+  height: fit-content;
+
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 16.25rem;
+    object-fit: cover;
+  }
+
+  label {
+    width: 100%;
+    display: inline-block;
+    color: var(--base11);
+    font-size: 0.875rem;
+    line-height: 150%;
+
+    margin-bottom: 0.75rem;
+  }
+
+  strong {
+    width: 100%;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 130%;
+
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    display: inline-block;
+    color: var(--base11);
+    line-height: 150%;
+
+    margin-bottom: 0.75rem;
+  }
+
+  @media (max-width: 680px) {
+    grid-column: 1 / 7;
+  }
+}
+
+.content {
+  padding: 1.5rem;
+}
