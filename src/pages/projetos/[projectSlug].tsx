@@ -77,7 +77,7 @@ export default function ProjectDetail({
     <>
       <Head>
         <SEO
-          url={`https://www.washingtonjunior.com/${projectSummary.slug}`}
+          url={`https://www.washingtonjunior.com/projetos/${projectSummary.slug}`}
           title={projectSummary.title}
           description={projectSummary.preview}
           ogImg={

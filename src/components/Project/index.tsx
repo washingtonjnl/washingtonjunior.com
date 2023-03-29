@@ -35,7 +35,7 @@ export function Project({
         {
           {
             free: (
-              <CTA href={`/${slug}`}>
+              <CTA href={`/projetos/${slug}`}>
                 <FileText size={20} />
                 ver projeto completo
               </CTA>
