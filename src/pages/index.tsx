@@ -101,28 +101,30 @@ export default function Home({
         </div>
       </section>
 
-      <section
-        id="projects"
-        className={styles.section}
-      >
-        <div className={styles.container}>
-          <h2 className={styles.h2 + ' ' + styles.full}>
-            <Layers size={32} />
-            Projetos de design
-          </h2>
-          {designProjects.map(project => (
-            <Project
-              key={project.id}
-              slug={project.slug}
-              images={project.images}
-              tags={project.tags}
-              title={project.title}
-              preview={project.preview}
-              visibility={project.visibility}
-            />
-          ))}
-        </div>
-      </section>
+      {designProjects && (
+        <section
+          id="projects"
+          className={styles.section}
+        >
+          <div className={styles.container}>
+            <h2 className={styles.h2 + ' ' + styles.full}>
+              <Layers size={32} />
+              Projetos de design
+            </h2>
+            {designProjects.map(project => (
+              <Project
+                key={project.id}
+                slug={project.slug}
+                images={project.images}
+                tags={project.tags}
+                title={project.title}
+                preview={project.preview}
+                visibility={project.visibility}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {researchProjects && (
         <section className={styles.section}>
