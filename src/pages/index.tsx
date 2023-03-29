@@ -65,10 +65,16 @@ export default function Home({
               Há mais de 7 anos transformando ideias em soluções eficientes,
               sempre centrado na experiência das pessoas usuárias.
             </p>
-            <CTA href="/#projects">
-              <Zap size={18} />
-              ver projetos selecionados
-            </CTA>
+            {(() => {
+              if (designProjects.length > 0 || researchProjects.length > 0) {
+                return (
+                  <CTA href="/#projects">
+                    <Zap size={18} />
+                    ver projetos selecionados
+                  </CTA>
+                );
+              }
+            })()}
           </div>
         </div>
       </section>
@@ -129,7 +135,10 @@ export default function Home({
       )}
 
       {researchProjects.length > 0 && (
-        <section className={styles.section}>
+        <section
+          id="projects"
+          className={styles.section}
+        >
           <div className={styles.container}>
             <h2 className={styles.h2 + ' ' + styles.full}>
               <Search size={32} />
