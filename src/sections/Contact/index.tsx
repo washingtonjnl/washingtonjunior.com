@@ -1,4 +1,4 @@
-import { TelegramLogo } from '@phosphor-icons/react';
+import { MessageCircle } from 'react-feather';
 
 import { ContactLink } from '@/components/ContactLink';
 
@@ -9,7 +9,7 @@ export function ContactSection(): JSX.Element {
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.h2}>
-          <TelegramLogo size={40} />
+          <MessageCircle size={40} />
           Fale comigo
         </h2>
         <ContactLink

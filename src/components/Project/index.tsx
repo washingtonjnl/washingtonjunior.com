@@ -1,4 +1,4 @@
-import { FileText, LockSimple, ClockCountdown } from '@phosphor-icons/react';
+import { Clock, FileText, Lock } from 'react-feather';
 
 import { toNotionImageUrl } from '@/core/notion';
 
@@ -42,13 +42,13 @@ export function Project({
             ),
             restrict: (
               <CTA href={`/projetos/${slug}`}>
-                <LockSimple size={20} />
+                <Lock size={20} />
                 ver projeto completo
               </CTA>
             ),
             soon: (
               <CTA disabled>
-                <ClockCountdown size={20} />
+                <Clock size={20} />
                 em breve
               </CTA>
             ),

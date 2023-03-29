@@ -1,9 +1,6 @@
-import FingerprintSimple from '@phosphor-icons/react/dist/icons/FingerprintSimple';
-import Graph from '@phosphor-icons/react/dist/icons/Graph';
-import Lightning from '@phosphor-icons/react/dist/icons/Lightning';
-import ListMagnifyingGlass from '@phosphor-icons/react/dist/icons/ListMagnifyingGlass';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import { Compass, Layers, Search, Zap } from 'react-feather';
 
 import { getPageTable } from '@/core/blog';
 
@@ -70,7 +67,7 @@ export default function Home({
               sempre centrado na experiência das pessoas usuárias.
             </p>
             <CTA href="/#projects">
-              <Lightning size={20} />
+              <Zap size={20} />
               ver projetos selecionados
             </CTA>
           </div>
@@ -80,7 +77,7 @@ export default function Home({
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.h2}>
-            <FingerprintSimple size={40} />
+            <Compass size={40} />
             Princípios
           </h2>
           <Principle
@@ -113,7 +110,7 @@ export default function Home({
       >
         <div className={styles.container}>
           <h2 className={styles.h2 + ' ' + styles.full}>
-            <Graph size={40} />
+            <Layers size={40} />
             Projetos de design
           </h2>
           {designProjects.map(project => (
@@ -134,7 +131,7 @@ export default function Home({
         <section className={styles.section}>
           <div className={styles.container}>
             <h2 className={styles.h2 + ' ' + styles.full}>
-              <ListMagnifyingGlass size={40} />
+              <Search size={40} />
               Projetos de pesquisa
             </h2>
             {researchProjects.map(project => (

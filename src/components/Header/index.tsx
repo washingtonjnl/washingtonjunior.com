@@ -1,14 +1,15 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import { Sun } from '@phosphor-icons/react';
+
 import Link from 'next/link';
 import { useContext } from 'react';
+import { Moon, Sun } from 'react-feather';
 
 import { ThemeContext } from '@/contexts/ThemeContext';
 
 import styles from './styles.module.scss';
 
 export function Header(): JSX.Element {
-  const { switchTheme } = useContext(ThemeContext);
+  const { currentTheme, switchTheme } = useContext(ThemeContext);
 
   return (
     <header className={styles.header}>
@@ -31,7 +32,7 @@ export function Header(): JSX.Element {
           onClick={switchTheme}
           className={styles.themeButton}
         >
-          <Sun size={18} />
+          {currentTheme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
         </button>
       </nav>
     </header>
