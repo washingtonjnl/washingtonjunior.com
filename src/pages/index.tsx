@@ -1,9 +1,9 @@
-import {
-  Lightning,
-  Graph,
-  ListMagnifyingGlass,
-  FingerprintSimple,
-} from '@phosphor-icons/react';
+// import {
+//   Lightning,
+//   Graph,
+//   ListMagnifyingGlass,
+//   FingerprintSimple,
+// } from '@phosphor-icons/react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
@@ -72,7 +72,7 @@ export default function Home({
               sempre centrado na experiência das pessoas usuárias.
             </p>
             <CTA href="/#projects">
-              <Lightning size={20} />
+              {/* <Lightning size={20} /> */}
               ver projetos selecionados
             </CTA>
           </div>
@@ -82,7 +82,7 @@ export default function Home({
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.h2}>
-            <FingerprintSimple size={40} />
+            {/* <FingerprintSimple size={40} /> */}
             Princípios
           </h2>
           <Principle
@@ -115,7 +115,7 @@ export default function Home({
       >
         <div className={styles.container}>
           <h2 className={styles.h2 + ' ' + styles.full}>
-            <Graph size={40} />
+            {/* <Graph size={40} /> */}
             Projetos de design
           </h2>
           {designProjects.map(project => (
@@ -136,7 +136,7 @@ export default function Home({
         <section className={styles.section}>
           <div className={styles.container}>
             <h2 className={styles.h2 + ' ' + styles.full}>
-              <ListMagnifyingGlass size={40} />
+              {/* <ListMagnifyingGlass size={40} /> */}
               Projetos de pesquisa
             </h2>
             {researchProjects.map(project => (
