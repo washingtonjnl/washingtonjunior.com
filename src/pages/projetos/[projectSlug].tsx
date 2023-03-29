@@ -1,5 +1,4 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import Head from 'next/head';
 import { ExtendedRecordMap } from 'notion-types';
 
 import { getPageTable, getPageBlocks } from '@/core/blog';
@@ -75,18 +74,16 @@ export default function ProjectDetail({
 }): JSX.Element {
   return (
     <>
-      <Head>
-        <SEO
-          url={`https://www.washingtonjunior.com/projetos/${projectSummary.slug}`}
-          title={projectSummary.title}
-          description={projectSummary.preview}
-          ogImg={
-            projectSummary.images.length > 0
-              ? toNotionImageUrl(projectSummary.images[0].url)
-              : '/og-img.jpg'
-          }
-        />
-      </Head>
+      <SEO
+        url={`https://www.washingtonjunior.com/projetos/${projectSummary.slug}`}
+        title={projectSummary.title}
+        description={projectSummary.preview}
+        ogImg={
+          projectSummary.images.length > 0
+            ? toNotionImageUrl(projectSummary.images[0].url)
+            : '/og-img.jpg'
+        }
+      />
       {projectSummary.images.length > 0 && (
         <div className={styles.coverSection}>
           <img

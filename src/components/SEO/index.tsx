@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 interface SEOProps {
   url: string;
   title: string;
@@ -7,7 +9,7 @@ interface SEOProps {
 
 export function SEO({ url, title, description, ogImg }: SEOProps): JSX.Element {
   return (
-    <>
+    <Head>
       <title>{title}</title>
       <meta
         name="title"
@@ -59,6 +61,6 @@ export function SEO({ url, title, description, ogImg }: SEOProps): JSX.Element {
         property="twitter:image"
         content={ogImg}
       />
-    </>
+    </Head>
   );
 }

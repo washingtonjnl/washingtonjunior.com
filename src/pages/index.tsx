@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import Head from 'next/head';
 import { Compass, Layers, Search, Zap } from 'react-feather';
 
 import { getPageTable } from '@/core/blog';
@@ -48,14 +47,12 @@ export default function Home({
 }: HomeProps): JSX.Element {
   return (
     <>
-      <Head>
-        <SEO
-          url="https://www.washingtonjunior.com/"
-          title="Washington Junior | Design de Produto Centrado no Usuário"
-          description="Conheça o trabalho de Washington Junior, product designer com mais de 7 anos de experiência, que transforma ideias em soluções eficientes para melhorar a experiência das pessoas usuárias."
-          ogImg="/og-img.jpg"
-        />
-      </Head>
+      <SEO
+        url="https://www.washingtonjunior.com/"
+        title="Washington Junior | Design de Produto Centrado no Usuário"
+        description="Conheça o trabalho de Washington Junior, product designer com mais de 7 anos de experiência, que transforma ideias em soluções eficientes para melhorar a experiência das pessoas usuárias."
+        ogImg="/og-img.jpg"
+      />
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.content}>
