@@ -61,6 +61,7 @@ export const getStaticProps: GetStaticProps = async context => {
       projectSummary: thisProject,
       projectContent,
     },
+    revalidate: 10 * 1 * 60, // 10 minutes
   };
 };
 
