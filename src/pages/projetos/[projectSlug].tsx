@@ -45,9 +45,9 @@ export const getStaticProps: GetStaticProps = async context => {
 
   if (
     !thisProject || // project not found
-    !thisProject.published || // project not published
-    thisProject.visibility === 'restrict' || // project requires a password
-    thisProject.visibility === 'soon' // project not finished
+    !thisProject.published // project not published
+    // thisProject.visibility === 'restrict' || // project requires a password
+    // thisProject.visibility === 'soon' // project not finished
   ) {
     return {
       notFound: true,
